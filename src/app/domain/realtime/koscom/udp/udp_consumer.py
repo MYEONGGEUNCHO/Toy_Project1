@@ -38,7 +38,7 @@ def koscom_udp_consumer(
                 record_chunk = []
                 cnt = 0
                 now_stmp = datetime.now()
-                now_str = now_stmp.strftime('%Y-%m-%d').encode('uft-8')
+                now_str = now_stmp.strftime('%Y-%m-%d').encode('cp949')
                 
                 for partition, messages in poll_data.items():
                     for message in messages:
@@ -51,6 +51,7 @@ def koscom_udp_consumer(
                         
                         except Exception as parse_exc:
                             print(parse_exc)
+                consumer.commit()
             except Exception as inner_exc:
                 print(inner_exc)
     except Exception as exc:

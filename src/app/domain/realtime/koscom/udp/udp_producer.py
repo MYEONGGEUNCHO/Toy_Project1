@@ -57,7 +57,7 @@ def koscom_udp_producer(
     while True:
         try:
             data, addr = sock.recvfrom(group['buff_size'])
-            rst = data[:-1].decode("utf8mb4")
+            rst = data[:-1].decode("utf-8")
             base_producer.send(topic, value=rst)
             print(f'{group["name"]}||{rst}')
                     

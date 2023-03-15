@@ -11,10 +11,10 @@ class EnumBase(Enum):
         return self.data
 
 class UdpMulticastGroup(EnumBase):
-    NGGROUP1= (1, {'host': '233.38.231.172', 'port': 10422, 'name': 'nggroup2', 'ttl': 512, 'buff_size': 10240})
-    NGGROUP2 = (2, {'host': '233.38.231.151', 'port': 10401, 'name': 'nggroup3', 'ttl': 512, 'buff_size': 10240})
-    NGGROUP3 = (3, {'host': '233.38.231.167', 'port': 10451, 'name': 'nggroup4', 'ttl': 512, 'buff_size': 10240})
-    NGGROUP4 = (4, {'host': '233.38.231.169', 'port': 10452, 'name': 'nggroup5', 'ttl': 512, 'buff_size': 10240})    
+    NGGROUP1= (1, {'host': '233.38.231.172', 'port': 10422, 'name': 'nggroup1', 'ttl': 512, 'buff_size': 10240})
+    NGGROUP2 = (2, {'host': '233.38.231.151', 'port': 10401, 'name': 'nggroup2', 'ttl': 512, 'buff_size': 10240})
+    NGGROUP3 = (3, {'host': '233.38.231.167', 'port': 10451, 'name': 'nggroup3', 'ttl': 512, 'buff_size': 10240})
+    NGGROUP4 = (4, {'host': '233.38.231.169', 'port': 10452, 'name': 'nggroup4', 'ttl': 512, 'buff_size': 10240})    
 
     @classmethod
     def get_by_name(cls, name: str):
