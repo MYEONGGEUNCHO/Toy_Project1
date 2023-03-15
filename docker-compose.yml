@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  mariadb:
+    image: mariadb:10.6.8
+    container_name: maria_db_toy_project01
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - 3306:3306
+    restart: always
+  mongodb:
+    image: mongo:4.2.21
+    container_name: mongo_db_toy_project01
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+      - MONGO_INITDB_DATABASE=mydb
+    ports:
+      - 27017:27017
+    restart: always
+  postgres:
+    image: postgres:9.6
+    container_name: postgres_toy_project01
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=1234
+    ports:
+      - "5432:5432"
+
+
+
+      
