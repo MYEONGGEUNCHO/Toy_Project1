@@ -44,6 +44,27 @@ def koscom_realtime_consumer(
         , debug=debug
     )
 
+@main.command()
+@click.option('-d', '--data_path', help='파일 경로', default='C:\\Users\\202201006\\Desktop\\project\\mgcho\\Toy_Project1_io\\res\\batch\\ftp\\koscom\\20230307')
+@click.option('-t', '--target_date', help='날짜', default='')
+@click.option('-e', '--exe_tm', help='처리시간', default=3)
+@click.option('-d', '--debug', help='flag', default=False, is_flag=True)
+def koscom_ftp(
+    data_path: str
+    , target_date: str
+    , exe_tm: str
+    , debug: bool
+) -> None:
+    
+    from domain.batch.tasks.koscom.ftp import extract_data
+    
+    extract_data(
+        data_path=data_path
+        , target_date=target_date
+        , exe_tm=exe_tm
+        , debug=debug
+    )
+
     
 
 if __name__ == "__main__":

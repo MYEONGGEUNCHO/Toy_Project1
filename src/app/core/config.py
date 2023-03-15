@@ -85,7 +85,7 @@ class Settings(BaseSettings):
         'kafka2.egap.co.kr:9092',
         'kafka2.egap.co.kr:9093',
         'kafka3.egap.co.kr:9092',
-        'kafka3.egap.co.kr:9093'
+        'kafka3.egap.co.kr:9093' 
     ]
     
     
